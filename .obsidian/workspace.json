@@ -196,6 +196,10 @@
   },
   "active": "a4e65d7b53248f0c",
   "lastOpenFiles": [
+    "docs/stage-08-imitation-learning.md",
+    "docs/stage-07-synthetic-data-generation.md",
+    "docs/stage-06-domain-randomization.md",
+    "docs/stage-05-mobile-manipulator-environment.md",
     "docs/stage-04-isaac-lab.md",
     "docs/stage-03-isaac-sim-basics.md",
     "docs/stage-02-mujoco-control-basics.md",
