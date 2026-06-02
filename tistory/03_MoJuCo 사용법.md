@@ -172,3 +172,4 @@ model.save("ppo_inverted_pendulum")
 
 env.close()
  ```
+해당 학습에는 MlpPolicy를 사용하였다.
