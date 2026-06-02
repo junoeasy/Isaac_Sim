@@ -104,42 +104,23 @@ Policy란 observation을 보고 action을 정하는 규칙이다.
 이번에는 policy를 직접 정해서 진행해보자
 기존 observation 4개를 각각 cart_pos, pole_angle, cart_vel, pole_ang_vel 이런식으로 설정한다.
 이후 PD 제어와 같이 cart_pos와 pole_angle에는 비례제어이득값, cart_vel과 pole_ang_vel에는 미분제어이득값을 곱해준다.
-``` py
+``` python
 for step in range(10000):
+	cart_pos, pole_angle, cart_vel, pole_ang_vel = obs
+	action_value = (
+		10.0 * pole_angle
+		+ 1.0 * pole_ang_vel
+		+ 0.5 * cart_pos
+		+ 0.2 * cart_vel
+	)
 
-cart_pos, pole_angle, cart_vel, pole_ang_vel = obs
-
-action_value = (
-
-10.0 * pole_angle
-
-+ 1.0 * pole_ang_vel
-
-+ 0.5 * cart_pos
-
-+ 0.2 * cart_vel
-
-)
-
-action_value = np.clip(action_value, -3.0, 3.0)
-
-  
-
-action = np.array([action_value], dtype=np.float32)
-
-  
-
-obs, reward, terminated, truncated, info = env.step(action)
-
-  
-
-print(step, reward, terminated, truncated,obs[0],obs[1],obs[2],obs[3])
-
-time.sleep(0.1)
-
-if terminated or truncated:
-
-obs, info = env.reset()
-
-break
+	action_value = np.clip(action_value, -3.0, 3.0)
+	action = np.array([action_value], dtype=np.float32)
+	obs, reward, terminated, truncated, info = env.step(action)
+		print(step, reward, terminated,truncated,obs[0],obs[1],obs[2],obs[3])
+	time.sleep(0.1)
+	if terminated or truncated:
+		obs, info = env.reset()
+		break
 ```
+이 정도 이득값을 배치하면
