@@ -81,8 +81,8 @@ reward를 같이 출력하면
 이런식으로 나온다.
 
 ## 3.예제 수정 및 개선 및 GUI표시
-위의 기본 예제를 활용하여 action의 값을 random 대신 특정 값을 주는 것을 해보았다.
-추가로 GUI도 표시되게 추가하였다.
+
+### GUI추가하기
 처음에 있는 env를
 ```
 env = gym.make("InvertedPendulum-v5", render_mode="human")
@@ -92,8 +92,11 @@ env = gym.make("InvertedPendulum-v5", render_mode="human")
 시뮬 속도가 빠르기 때문에 코드 안에 import time과 for문 안에 time.sleep(0.1)정도를 추가해준다.
 ![[Mojuco7.gif]]
 
-
+### action 직접 제어
 현재 action은 -3.0에서 3.0중에 random값인데 이것을 1.0으로 고정해보자.
 action은 1차원 배열 1개이므로 action=[1.0] 으로 수정해준다.
 ![[Mojuco8.gif]]
 다음과 같이 오른쪽 방향으로만 카트가 이동하는 것을 볼 수 있다.
+
+### 수동 policy
+Policy란 observat
