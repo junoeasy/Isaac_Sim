@@ -33,7 +33,7 @@ for step in range(100):
     obs, reward, terminated, truncated, info = env.step(action)
 	#env.step에 해당 액션 넣고 값 불러오기
 	
-    print(step, reward, terminated, truncated)
+    print(step, reward, terminated, truncated, obs[0], obs[1], obs[2], obs[3])
 	# 해당 값 출력
 	# terminated : (규칙에 의한 종료)막대가 기준치 이상으로 기울어졌을 때 (현재는 |angle|<0.2)
 	# truncated : (시간에 의한 종료) 외부 제약 조건으로 인한 종료(step에 의해 종료)

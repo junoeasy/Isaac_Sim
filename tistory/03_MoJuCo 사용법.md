@@ -63,4 +63,14 @@ env.close()
 처음에 초기 값과 설정 값들이 나오고
 이후에 각 step별로 reward와 terminated,truncated 가 출력되고 있다.
 5번 step을 보면 현재 reward가 0이고 terminated가 True인 것을 확인할 수 있다.
-즉, 5번 step에서 |막대 기둥의 각도|>=0.2 가
+즉, 5번 step에서 |막대 기둥의 각도|>=0.2 가 됐다는 것을 알 수 있다.
+좀 더 자세히 알고 싶으면 추가로 obs 값을 매 step출력하면 된다.
+
+```
+
+    # print(step, reward, terminated, truncated)
+    
+    print(step, reward, terminated, truncated, obs[0], obs[1], obs[2], obs[3])
+```
+다음과 같이 수정하고 실행하면
+![[Pasted image 20260602103107.png|637]]
