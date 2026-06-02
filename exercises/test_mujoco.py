@@ -10,10 +10,15 @@ print("action space:", env.action_space)
 
 for step in range(10000):
     cart_pos, pole_angle, cart_vel, pole_ang_vel = obs
-    action_value = -1.0 * cart_pos - 0.5 * cart_vel
+    action_value = (
+        10.0 * pole_angle
+        + 1.0 * pole_ang_vel
+        + 0.5 * cart_pos
+        + 0.2 * cart_vel
+    )
     action_value = np.clip(action_value, -3.0, 3.0)
-    action = np.array([action_value], dtype=np.float32)
 
+    action = np.array([action_value], dtype=np.float32)
 
     obs, reward, terminated, truncated, info = env.step(action)
 
