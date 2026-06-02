@@ -48,6 +48,9 @@ for step in range(100):
 	
     print(step, reward, terminated, truncated)
 	# 해당 값 출력
+	# terminated : (규칙에 의한 종료)막대가 기준치 이상으로 기울어졌을 때 (현재는 |angle|<0.2)
+	# truncated : (tlrksdp dm)
+	
     if terminated or truncated:
         obs, info = env.reset()
 
