@@ -35,13 +35,19 @@ print("obs shape:", obs.shape)
 # 1차원 배열에 4개의 값이 있다.
 
 print("action space:", env.action_space)
+# action space: Box(-3.0, 3.0, (1,), float32)
+# action은 -3에서 3사이의 값이고 float32의 형식이다. 값은 1차원 배열 1개만 들어갈 수있다.
 
+#100번 반복하면서
 for step in range(100):
     action = env.action_space.sample()
+    # action값을 범위 내에서 random으로 하기
+    
     obs, reward, terminated, truncated, info = env.step(action)
-
+	env.step에 해당 액션 넣고 값 불러오기
+	
     print(step, reward, terminated, truncated)
-
+	# 해당 값 출력
     if terminated or truncated:
         obs, info = env.reset()
 
