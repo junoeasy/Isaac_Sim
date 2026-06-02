@@ -144,4 +144,4 @@ obs
 - policy network
 	- obs를 보고 action을 정하는 모델
 - value network
-	- 혅
+	- 현재 상태가 얼마나 좋은 상태인지 예측하는 모델
