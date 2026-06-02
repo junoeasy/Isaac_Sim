@@ -1,16 +1,3 @@
-MoJuCo를 사용하여 기본적인 제어에 대해 알아보기로 한다
-
-## 1. MoJuCo 설치
-```
-# MuJoCO = 물리 시뮬레이터
-pip install mujoco
-
-# Gymnasium = 강화학습 환경 인터페이스 표준
-pip install "gymnasium[mujoco]"
-```
-
-## 2. 초반 예제
-```py
 import gymnasium as gym
 
 # env에 gymnasium 새로 만들기 만든 버전은 InvertedPendulum 
@@ -53,9 +40,6 @@ for step in range(100):
 	
     if terminated or truncated:
         obs, info = env.reset()
-        //초기화
+        #//초기화
 
 env.close()
-```
-
-해당 파이썬 파일을 실행하면 값이 쭉 나온다.
