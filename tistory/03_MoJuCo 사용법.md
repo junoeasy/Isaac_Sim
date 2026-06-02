@@ -72,5 +72,8 @@ env.close()
     
     print(step, reward, terminated, truncated, obs[0], obs[1], obs[2], obs[3])
 ```
-다음과 같이 수정하고 실행하면
+다음과 같이 수정하고 실행하면 이렇게 나온다.
 ![[Pasted image 20260602103107.png|637]]
+4번 step을 보면 obs[1] 의 값이 -0.2286... 이고 이 값의 절대값이 0.2보다 크기 때문에  terminated가 True가 되고 reward가 0이 된다.
+
+reward를 같이 출력하면 
