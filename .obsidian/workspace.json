@@ -197,6 +197,8 @@
   "active": "52c48bb0366242f5",
   "lastOpenFiles": [
     "exercises/Mujoco_PPO.py",
+    "exercises/Mujoco_PPO_Learn.py",
+    "ppo_inverted_pendulum.zip",
     "exercises/Mujoco_PPO",
     "Mojuco8.gif",
     "Mojuco7.gif",
