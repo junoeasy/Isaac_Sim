@@ -126,5 +126,22 @@ for step in range(10000):
 이 정도 이득값을 배치하면 1000번 step까지는 
 
 ## 4. PPO
-PPO란, Proximal Policy Optimization으로 현재 policy를 조금씩만 안전하게 개선하는 강화학습 방법이다.
-이전 학습에서는 수동  policy를 직접 만들어 이득값을 직접 설정했었는데, PPO는 사람이 설정하는 것이 아니라 
+### PPO란
+Proximal Policy Optimization으로 현재 policy를 조금씩만 안전하게 개선하는 강화학습 방법이다.
+이전 학습에서는 수동  policy를 직접 만들어 이득값을 직접 설정했었는데, PPO는 사람이 설정하는 것이 아니라 신경망이 스스로 배우게 하는 방법
+
+### PPO 구조
+```
+obs
+-> neural network policy
+-> action
+-> MuJoCo step
+-> reward
+-> PPO가 policy 업데이트
+```
+
+### PPO가 학습하는 것
+- policy network
+	- obs를 보고 action을 정하는 모델
+- value network
+	- 혅
