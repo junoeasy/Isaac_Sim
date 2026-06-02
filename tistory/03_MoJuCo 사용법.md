@@ -23,7 +23,13 @@ env = gym.make("InvertedPendulum-v5")
 obs, info = env.reset()
 
 print("obs:", obs)
+# obs: [-0.0068138  -0.00394543 -0.0099438  -0.00846145]
+# obs[0] = 카트 위치(m)
+# obs[1] = 카트 위에 있는 막대의 각도(rad)
+# obs[2] = 카트의 선속도(m/s)
+# obs[3] =
 print("obs shape:", obs.shape)
+# obs shape: (4,) 
 print("action space:", env.action_space)
 
 for step in range(100):
