@@ -174,3 +174,4 @@ env.close()
  ```
 해당 학습에는 MlpPolicy를 사용하였다.
 stable_baselines3에는 MlpPolicy 말고도 CnnPolicy와 MultiInputPolicy가 있다.
+MlpPolicy
