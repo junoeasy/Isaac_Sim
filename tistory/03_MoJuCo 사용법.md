@@ -145,3 +145,14 @@ obs
 	- obs를 보고 action을 정하는 모델
 - value network
 	- 현재 상태가 얼마나 좋은 상태인지 예측하는 모델
+
+### PPO 하는 법
+```
+pip install stable-baselines3
+# stable-baselines3가 강화학습 PPO나 SAC알고리즘이 들어있음
+```
+
+ 학습 code
+ ``` python
+ 
+ ```
