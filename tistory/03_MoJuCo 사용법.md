@@ -123,4 +123,4 @@ for step in range(10000):
 		obs, info = env.reset()
 		break
 ```
-이 정도 이득값을 배치하면
+이 정도 이득값을 배치하면 1000번 step까지는 
