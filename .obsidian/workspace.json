@@ -194,8 +194,12 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "4498c0681090b1bb",
+  "active": "a4e65d7b53248f0c",
   "lastOpenFiles": [
+    "exercises/__pycache__/run_simple_mujoco.cpython-310.pyc",
+    "exercises/__pycache__",
+    "exercises/run_simple_mujoco.py",
+    "exercises/simple_pendulum.xml",
     "취업/채용박람회 기업별 자기소개서 초안.md",
     "취업/채용박람회 기업 조사 정리.md",
     "취업/채용박람회 기업 후보.md",
@@ -232,7 +236,6 @@
     "docs/stage-05-mobile-manipulator-environment.md",
     "docs/stage-04-isaac-lab.md",
     "docs/stage-03-isaac-sim-basics.md",
-    "exercises/Matrix_cal.py",
-    "tistory"
+    "exercises/Matrix_cal.py"
   ]
 }
