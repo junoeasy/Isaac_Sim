@@ -32,4 +32,9 @@ Isaac sim 실행 화면
 ![[Pasted image 20260611163403.png]]
 
 바닥생성하기 
-해당 화면에서 Create -> Physics -> Ground Plane
+상단의 Create -> Physics -> Ground Plane
+![[Pasted image 20260611163652.png]]
+
+박스 생성하기
+
+Create -> Mesh -> Cube
