@@ -62,7 +62,7 @@ def main() -> None:
     simulation_app.update()
 
     # 초기 속도를 준다. linear는 m/s, angular는 rad/s로 생각하면 된다.
-    cube.set_velocities(linear_velocities=[0.8, 0.0, 0.0], angular_velocities=[0.0, 0.0, 2.0])
+    cube.set_velocities(linear_velocities=[0.8, 0.0, -10.0], angular_velocities=[0.0, 0.0, 2.0])
 
     max_steps = 1800 if not args.test else 20
     for step in range(max_steps):
