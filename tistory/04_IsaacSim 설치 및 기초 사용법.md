@@ -65,3 +65,12 @@ vulkan 확인
 sudo apt install vulkan-tools  
 vulkaninfo | less
 ```
+
+이거 해서 gpu에 본인 그래픽 카드가 적혀있어야함
+
+이후에는 tailscale깔아서 다른 네트워크에서도 될 수 있도록 하기
+
+```
+curl -fsSL https://tailscale.com/install.sh | sh
+sudo tailscale up
+```
