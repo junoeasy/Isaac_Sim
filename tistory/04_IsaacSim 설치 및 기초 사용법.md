@@ -45,3 +45,23 @@ Create -> Mesh -> Cube
 
 ![[Peek 2026-06-11 16-45.gif]]
 
+
+
+
+----
+## 우분투 Isaac sim 원격으로 확인하기
+다른 공유기에서 원격으로 확인하기 위해서 일단 isaac sim streaming을 사용할 거임
+이거를 하기 위해 glxinfo가 필요 이거 설치하기 위해서 
+
+```
+sudo apt update
+sudo apt install mesa-utils
+glxinfo -B
+```
+
+
+vulkan 확인
+```
+sudo apt install vulkan-tools  
+vulkaninfo | less
+```
