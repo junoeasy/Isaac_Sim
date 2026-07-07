@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "tistory/03_MoJuCo 사용법.md",
+                "file": "codex 대화/05_다음_작업_순서.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "03_MoJuCo 사용법"
+              "title": "05_다음_작업_순서"
             }
           }
         ]
@@ -194,8 +194,9 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "a4e65d7b53248f0c",
+  "active": "52c48bb0366242f5",
   "lastOpenFiles": [
+    "tistory/03_MoJuCo 사용법.md",
     "codex 대화/README.md",
     "codex 대화/05_다음_작업_순서.md",
     "codex 대화/04_에러와_해결.md",
@@ -207,7 +208,6 @@
     "tistory/stable_baselines3의 PPO.md",
     "tistory/05_IsaacSim 으로.md",
     "tistory/04_IsaacSim 설치 및 기초 사용법.md",
-    "tistory/03_MoJuCo 사용법.md",
     "tistory/02_기초 준비.md",
     "tistory/01_Isaac sim  과 VLA 공부하기.md",
     "Mojuco6.gif",
