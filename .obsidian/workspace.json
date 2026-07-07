@@ -11,14 +11,12 @@
             "id": "52c48bb0366242f5",
             "type": "leaf",
             "state": {
-              "type": "markdown",
+              "type": "image",
               "state": {
-                "file": "tistory/04_IsaacSim 설치 및 기초 사용법.md",
-                "mode": "source",
-                "source": false
+                "file": "attach file/Peek 2026-06-11 16-45.gif"
               },
-              "icon": "lucide-file",
-              "title": "04_IsaacSim 설치 및 기초 사용법"
+              "icon": "lucide-image",
+              "title": "Peek 2026-06-11 16-45"
             }
           }
         ]
@@ -195,27 +193,27 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "52c48bb0366242f5",
+  "active": "4498c0681090b1bb",
   "lastOpenFiles": [
+    "attach file/Pasted image 20260602102740.png",
+    "tistory/04_IsaacSim 설치 및 기초 사용법.md",
+    "attach file",
     "exercises/__pycache__/isaac_franka_joint_control.cpython-310.pyc",
     "exercises/__pycache__/isaac_cube_rigid_body.cpython-310.pyc",
     "exercises/isaac_franka_joint_control.py",
     "exercises/isaac_cube_rigid_body.py",
-    "Peek 2026-06-11 16-45.gif",
-    "Pasted image 20260611163820.png",
-    "Pasted image 20260611163652.png",
-    "Pasted image 20260611163403.png",
-    "Pasted image 20260611163244.png",
+    "attach file/Peek 2026-06-11 16-45.gif",
+    "attach file/Pasted image 20260611163820.png",
+    "attach file/Pasted image 20260611163652.png",
+    "attach file/Pasted image 20260611163403.png",
+    "attach file/Pasted image 20260611163244.png",
     "tistory/stable_baselines3의 PPO.md",
     "Linux Isaac Sim.md",
-    "tistory/04_IsaacSim 설치 및 기초 사용법.md",
     "MUJOCO_LOG.TXT",
     "exercises/__pycache__/view_simple_mujoco.cpython-310.pyc",
     "exercises/view_simple_mujoco.py",
     "exercises/__pycache__/run_simple_mujoco.cpython-310.pyc",
     "exercises/__pycache__",
-    "exercises/run_simple_mujoco.py",
-    "exercises/simple_pendulum.xml",
     "취업/채용박람회 기업별 자기소개서 초안.md",
     "취업/채용박람회 기업 조사 정리.md",
     "취업/채용박람회 기업 후보.md",
@@ -223,22 +221,22 @@
     "Mojuco8.gif",
     "Mojuco7.gif",
     "Mojuco6.gif",
-    "Pasted image 20260602103519.png",
-    "Pasted image 20260602103518.png",
+    "attach file/Pasted image 20260602103519.png",
+    "attach file/Pasted image 20260602103518.png",
     "tistory/02_기초 준비.md",
     "tistory/01_Isaac sim  과 VLA 공부하기.md",
     "README.md",
-    "docs/stage-02-mujoco-control-basics.md",
-    "docs/stage-13-vla-rfm-evaluation-benchmarks.md",
-    "docs/stage-12-large-scale-training-infrastructure.md",
-    "docs/stage-11-sim-to-real-transfer.md",
-    "docs/stage-10-reinforcement-learning.md",
-    "docs/stage-09-visuomotor-transformer.md",
-    "docs/stage-08-imitation-learning.md",
-    "docs/stage-07-synthetic-data-generation.md",
-    "docs/stage-06-domain-randomization.md",
-    "docs/stage-05-mobile-manipulator-environment.md",
-    "docs/stage-04-isaac-lab.md",
-    "docs/stage-03-isaac-sim-basics.md"
+    "01.docs/stage-02-mujoco-control-basics.md",
+    "01.docs/stage-13-vla-rfm-evaluation-benchmarks.md",
+    "01.docs/stage-12-large-scale-training-infrastructure.md",
+    "01.docs/stage-11-sim-to-real-transfer.md",
+    "01.docs/stage-10-reinforcement-learning.md",
+    "01.docs/stage-09-visuomotor-transformer.md",
+    "01.docs/stage-08-imitation-learning.md",
+    "01.docs/stage-07-synthetic-data-generation.md",
+    "01.docs/stage-06-domain-randomization.md",
+    "01.docs/stage-05-mobile-manipulator-environment.md",
+    "01.docs/stage-04-isaac-lab.md",
+    "01.docs/stage-03-isaac-sim-basics.md"
   ]
 }
