@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "tistory/05_IsaacSim 으로.md",
+                "file": "tistory/03_MoJuCo 사용법.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "05_IsaacSim 으로"
+              "title": "03_MoJuCo 사용법"
             }
           }
         ]
@@ -171,8 +171,8 @@
             "state": {
               "type": "git-view",
               "state": {},
-              "icon": "lucide-ghost",
-              "title": "git-view"
+              "icon": "git-pull-request",
+              "title": "Source Control"
             }
           }
         ],
@@ -180,8 +180,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -195,8 +194,16 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "52c48bb0366242f5",
+  "active": "a4e65d7b53248f0c",
   "lastOpenFiles": [
+    "codex 대화/README.md",
+    "codex 대화/05_다음_작업_순서.md",
+    "codex 대화/04_에러와_해결.md",
+    "codex 대화/03_joint_drive_축_설정.md",
+    "codex 대화/02_링크_분류_기준.md",
+    "codex 대화/01_파일_목록.md",
+    "codex 대화",
+    "Linux Isaac Sim.md",
     "tistory/stable_baselines3의 PPO.md",
     "tistory/05_IsaacSim 으로.md",
     "tistory/04_IsaacSim 설치 및 기초 사용법.md",
@@ -205,7 +212,6 @@
     "tistory/01_Isaac sim  과 VLA 공부하기.md",
     "Mojuco6.gif",
     "Mojuco7.gif",
-    "Linux Isaac Sim.md",
     "outputs/stage01_2link_arm.png",
     "attach file/Peek 2026-06-11 16-45.gif",
     "attach file/Pasted image 20260602102740.png",
@@ -222,7 +228,6 @@
     "exercises/__pycache__/view_simple_mujoco.cpython-310.pyc",
     "exercises/view_simple_mujoco.py",
     "exercises/__pycache__/run_simple_mujoco.cpython-310.pyc",
-    "exercises/__pycache__",
     "취업/채용박람회 기업별 자기소개서 초안.md",
     "취업/채용박람회 기업 조사 정리.md",
     "취업/채용박람회 기업 후보.md",
@@ -236,9 +241,6 @@
     "01.docs/stage-09-visuomotor-transformer.md",
     "01.docs/stage-08-imitation-learning.md",
     "01.docs/stage-07-synthetic-data-generation.md",
-    "01.docs/stage-06-domain-randomization.md",
-    "01.docs/stage-05-mobile-manipulator-environment.md",
-    "01.docs/stage-04-isaac-lab.md",
-    "01.docs/stage-03-isaac-sim-basics.md"
+    "01.docs/stage-06-domain-randomization.md"
   ]
 }
