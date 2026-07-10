@@ -255,7 +255,121 @@ find ~/isaac/IsaacLab/logs/rsl_rl -type f \( -name '*.pt' -o -name '*.pth' \) | 
 ./isaaclab.sh play --rl_library rsl_rl --task Isaac-Lift-Cube-OpenManipulatorX-v0 --help
 ```
 
-## 9. 행동·관측·보상은 무엇인가
+## 9. 실험 결과 확인하기
+
+학습 결과는 다음 세 가지를 함께 확인한다.
+
+```text
+1. TensorBoard: reward와 loss가 학습 중 어떻게 변했는가
+2. checkpoint: 어느 iteration의 policy를 사용할 것인가
+3. play/video: 실제로 로봇팔이 목표를 달성하는가
+```
+
+### 9.1 TensorBoard 그래프
+
+학습 로그를 TensorBoard로 연다.
+
+```bash
+cd ~/isaac/IsaacLab
+./isaaclab.sh -p -m tensorboard \
+  --logdir ~/isaac/IsaacLab/logs/rsl_rl \
+  --port 6006
+```
+
+브라우저에서 다음 주소를 연다.
+
+```text
+http://localhost:6006
+```
+
+확인할 주요 값:
+
+- `Episode_Reward/...`: 평균 episode reward가 증가하고 안정화되는가
+- `Episode_Termination/...`: timeout이 아닌 성공 종료가 증가하는가
+- `Loss/...`: policy/value loss가 발산하지 않는가
+- `Policy/...`: action이 한계값에 계속 붙지 않는가
+- `Performance/...`: steps per second와 simulation 속도
+
+TensorBoard의 reward 상승만으로 성공을 판단하지 않는다. ROBOTIS용 task에는 `success`, `reached_target`, `lifted_cube` 같은 성공 지표를 reward와 별도로 기록하는 것이 좋다.
+
+### 9.2 checkpoint 확인
+
+학습 run과 checkpoint를 찾는다.
+
+```bash
+find ~/isaac/IsaacLab/logs/rsl_rl -type f \
+  \( -name 'model_*.pt' -o -name '*.pth' \) | sort | tail -20
+```
+
+보통 다음처럼 저장된다.
+
+```text
+~/isaac/IsaacLab/logs/rsl_rl/<task_name>/<date-time>/model_200.pt
+```
+
+마지막 checkpoint가 항상 가장 좋은 것은 아니다. TensorBoard에서 reward와 success rate가 가장 좋은 iteration의 모델을 선택한다.
+
+### 9.3 GUI에서 policy 재생
+
+선택한 checkpoint를 GUI로 재생한다.
+
+```bash
+cd ~/isaac/IsaacLab
+./isaaclab.sh play \
+  --rl_library rsl_rl \
+  --task Isaac-Lift-Cube-OpenManipulatorX-v0 \
+  --num_envs 1 \
+  --checkpoint /절대경로/model_200.pt \
+  --viz kit
+```
+
+`num_envs=1`로 재생하면 ROBOTIS 팔의 동작과 gripper 접촉을 보기 쉽다. 다음을 눈으로 확인한다.
+
+- end-effector가 목표 위치로 이동하는가
+- 관절이 limit에 부딪히지 않는가
+- gripper가 올바른 방향으로 닫히는가
+- 큐브를 실제로 잡고 들어 올리는가
+- episode reset 이후에도 다시 성공하는가
+
+### 9.4 영상으로 저장
+
+GUI를 보면서 policy 실행 영상을 저장한다.
+
+```bash
+./isaaclab.sh play \
+  --rl_library rsl_rl \
+  --task Isaac-Lift-Cube-OpenManipulatorX-v0 \
+  --num_envs 1 \
+  --checkpoint /절대경로/model_200.pt \
+  --video \
+  --video_length 300 \
+  --viz kit
+```
+
+영상은 보통 해당 task의 log 디렉터리 아래 `videos/play`에 저장된다.
+
+```bash
+find ~/isaac/IsaacLab/logs/rsl_rl -type f \( -name '*.mp4' -o -name '*.webm' \) | sort | tail -20
+```
+
+### 9.5 실험 결과 기록표
+
+실험마다 아래 항목을 기록하면 reward만 보고 잘못 판단하는 일을 줄일 수 있다.
+
+| 항목 | 기록 예시 |
+|---|---|
+| task | `Isaac-Reach-OpenManipulatorX-v0` |
+| robot model | USD 경로, joint 수, gripper 이름 |
+| num_envs | 64, 256, 1024 |
+| max_iterations | 1000, 2000 |
+| best checkpoint | `model_1200.pt` |
+| 평균 reward | TensorBoard 값 |
+| success rate | 별도 success metric |
+| episode length | 평균 step 수 |
+| 실패 원인 | timeout, joint limit, grasp 실패 등 |
+| 영상 | `videos/play/*.mp4` |
+
+## 10. 행동·관측·보상은 무엇인가
 
 강화학습 task를 이해할 때 아래 네 가지를 먼저 찾으면 된다.
 
@@ -279,7 +393,7 @@ Isaac-Lift-Cube-OpenManipulatorX-IK-Rel-v0
 ./isaaclab.sh -p scripts/environments/list_envs.py --keyword Lift-Cube
 ```
 
-## 10. 내 task로 바꾸는 방법
+## 11. 내 task로 바꾸는 방법
 
 처음부터 새 환경을 만들기보다 Isaac Lab의 Franka Reach/Lift task 구조를 참고해 OpenMANIPULATOR-X용 task를 만든다. Franka의 관절 수·joint 이름·gripper 이름을 그대로 복사하면 안 된다.
 
@@ -326,7 +440,7 @@ events      reset 시 위치·질량·마찰·목표 랜덤화
 7. 10 iteration → 100 iteration → 장시간 학습 순으로 검증
 ```
 
-## 11. Isaac Sim에서 ROBOTIS 모델 검증하기
+## 12. Isaac Sim에서 ROBOTIS 모델 검증하기
 
 로봇을 Isaac Sim GUI에서 직접 배치하고 제어하는 테스트는 별도로 할 수 있다.
 
@@ -345,7 +459,7 @@ Isaac Sim 실행
 
 따라서 GUI에서 만든 USD를 저장했다고 해서 PPO 학습 task가 자동으로 만들어지지는 않는다. custom USD를 Isaac Lab에서 사용하려면 scene configuration에 USD 경로를 연결하고, articulation의 joint/body 이름과 action·observation 설정을 맞춰야 한다.
 
-## 12. 기존에 만든 6-DOF arm USD를 연결하는 시점
+## 13. 기존에 만든 6-DOF arm USD를 연결하는 시점
 
 OpenMANIPULATOR-X Reach가 먼저다. 그 다음 기존에 만든 6-DOF USD를 같은 custom Reach task에 연결한다. 두 로봇을 비교하면 학습 실패가 task 문제인지 모델 문제인지 분리하기 쉽다.
 
@@ -370,7 +484,7 @@ OpenMANIPULATOR-X Reach task 학습 성공
 - gripper가 실제로 닫히고 물체와 충돌하는가
 - collision mesh와 visual mesh가 분리되어 있는가
 
-## 13. 자주 생기는 문제
+## 14. 자주 생기는 문제
 
 ### `Task not found`
 
@@ -416,7 +530,7 @@ task 이름이나 버전이 맞지 않는 경우다.
 5. Place: 목표 위치에 놓음
 ```
 
-## 14. 추천 실습 순서
+## 15. 추천 실습 순서
 
 ```text
 [ ] Isaac-Reach-Franka로 Isaac Lab 구조 확인
@@ -433,7 +547,7 @@ task 이름이나 버전이 맞지 않는 경우다.
 [ ] 기존 6-DOF USD를 OpenMANIPULATOR-X Reach task에 연결
 ```
 
-## 15. 참고 링크
+## 16. 참고 링크
 
 - [Isaac Lab 공식 Quickstart](https://isaac-sim.github.io/IsaacLab/main/source/setup/quickstart.html)
 - [Isaac Lab 사용 가능한 환경](https://isaac-sim.github.io/IsaacLab/release/3.0.0-beta2/source/overview/environments.html)
