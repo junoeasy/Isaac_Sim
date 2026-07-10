@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "codex 대화/05_다음_작업_순서.md",
+                "file": "01.docs/stage-04-isaac-lab.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "05_다음_작업_순서"
+              "title": "stage-04-isaac-lab"
             }
           }
         ]
@@ -44,7 +44,7 @@
                 "autoReveal": false
               },
               "icon": "lucide-folder-closed",
-              "title": "파일 탐색기"
+              "title": "Files"
             }
           },
           {
@@ -171,8 +171,8 @@
             "state": {
               "type": "git-view",
               "state": {},
-              "icon": "git-pull-request",
-              "title": "Source Control"
+              "icon": "lucide-ghost",
+              "title": "git-view"
             }
           }
         ],
@@ -180,38 +180,33 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 300,
+    "collapsed": true
   },
   "left-ribbon": {
     "hiddenItems": {
-      "switcher:빠른 전환기 열기": false,
-      "graph:그래프 뷰 열기": false,
-      "canvas:새 캔버스 만들기": false,
-      "daily-notes:오늘의 일일 노트 열기": false,
-      "templates:템플릿 삽입": false,
-      "command-palette:명령어 팔레트 열기": false,
-      "bases:새 베이스 생성하기": false,
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false,
+      "bases:Create new base": false,
       "obsidian-git:Open Git source control": false
     }
   },
   "active": "52c48bb0366242f5",
   "lastOpenFiles": [
-    "tistory/03_MoJuCo 사용법.md",
-    "codex 대화/README.md",
-    "codex 대화/05_다음_작업_순서.md",
-    "codex 대화/04_에러와_해결.md",
-    "codex 대화/03_joint_drive_축_설정.md",
-    "codex 대화/02_링크_분류_기준.md",
-    "codex 대화/01_파일_목록.md",
-    "codex 대화",
-    "Linux Isaac Sim.md",
-    "tistory/stable_baselines3의 PPO.md",
+    "01.docs/stage-03-isaac-sim-basics.md",
     "tistory/05_IsaacSim 으로.md",
+    "tistory/stable_baselines3의 PPO.md",
     "tistory/04_IsaacSim 설치 및 기초 사용법.md",
+    "tistory/03_MoJuCo 사용법.md",
     "tistory/02_기초 준비.md",
     "tistory/01_Isaac sim  과 VLA 공부하기.md",
     "Mojuco6.gif",
     "Mojuco7.gif",
+    "Linux Isaac Sim.md",
     "outputs/stage01_2link_arm.png",
     "attach file/Peek 2026-06-11 16-45.gif",
     "attach file/Pasted image 20260602102740.png",
@@ -228,6 +223,7 @@
     "exercises/__pycache__/view_simple_mujoco.cpython-310.pyc",
     "exercises/view_simple_mujoco.py",
     "exercises/__pycache__/run_simple_mujoco.cpython-310.pyc",
+    "exercises/__pycache__",
     "취업/채용박람회 기업별 자기소개서 초안.md",
     "취업/채용박람회 기업 조사 정리.md",
     "취업/채용박람회 기업 후보.md",
@@ -241,6 +237,8 @@
     "01.docs/stage-09-visuomotor-transformer.md",
     "01.docs/stage-08-imitation-learning.md",
     "01.docs/stage-07-synthetic-data-generation.md",
-    "01.docs/stage-06-domain-randomization.md"
+    "01.docs/stage-06-domain-randomization.md",
+    "01.docs/stage-05-mobile-manipulator-environment.md",
+    "01.docs/stage-04-isaac-lab.md"
   ]
 }
